@@ -98,7 +98,7 @@ class Program(log.Loggable):
         """
         Eject the given device.
         """
-        os.system('eject %s' % device)
+        # os.system('eject %s' % device)
 
     def unmountDevice(self, device):
         """
