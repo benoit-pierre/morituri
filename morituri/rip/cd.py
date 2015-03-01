@@ -256,6 +256,11 @@ Install pycdio and run 'rip offset find' to detect your drive's offset.
                         options.offset)
         if self.options.output_directory is None:
             self.options.output_directory = os.getcwd()
+        else:
+            self.options.output_directory = os.path.expanduser(self.options.output_directory)
+
+        if self.options.working_directory is not None:
+            self.options.working_directory = os.path.expanduser(self.options.working_directory)
 
         if self.options.logger:
             try:
